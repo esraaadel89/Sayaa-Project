@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تبرع</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/variables.css" />
+    <link rel="stylesheet" href="./css/donate.css" />
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary position-fixed w-100 z-3"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <img
+              src="assets/imgs/logo2.svg"
+              alt="logo"
+              width="70px"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="تبديل التنقل"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="index.html"
+                  >الرئيسية</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">مبادراتنا</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="volunteer-opportunity.html"
+                  >فرص التطوع</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active-link" href="donate.html">التبرعات</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">اتصل بنا</a>
+              </li>
+            </ul>
+            <a class="btn ms-3" href="login.html">تسجيل الدخول</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--start Hero section-->
+    <div class="landing">
+      <div class="content">
+        <div class="text">
+          <h2>ساهم في صنع الفرق اليوم</h2>
+          <p>تبرع الآن وكن سببًا في إحداث تغيير إيجابي في حياة الآخرين.</p>
+        </div>
+      </div>
+    </div>
+    <!--end Hero section-->
+
+    <!--start Donation Options Section-->
+    <section class="donate">
+      <div class="container">
+        <div class="donate-plan">
+          <div class="row">
+            <div class="col-sm-6">
+              <button
+                type="button"
+                class="btn btn-outline-success donate-frequency"
+                id="onceBtn"
+              >
+                مرة واحدة
+              </button>
+            </div>
+            <div class="col-sm-6">
+              <button
+                type="button"
+                class="btn btn-outline-success donate-frequency"
+                id="monthlyBtn"
+              >
+                شهري
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Optional Prices -->
+        <div class="prices-group">
+          <label>
+            <input
+              type="radio"
+              name="donation-amount"
+              class="donation-amount"
+              value="50"
+            />
+            50 جنيه
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="donation-amount"
+              class="donation-amount"
+              value="100"
+            />
+            100 جنيه
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="donation-amount"
+              class="donation-amount"
+              value="200"
+            />
+            200 جنيه
+          </label>
+        </div>
+
+        <div class="mb-3 text-center">
+          <select
+            class="form-control w-50 mx-auto"
+            name="company"
+            id="company"
+            required
+          >
+            <option value="">اختر شركة</option>
+            <option value="company1">رسالة</option>
+            <option value="company2">صناع الحياة</option>
+            <option value="company3">بنك الطعام المصري</option>
+            <option value="company4">بهية</option>
+          </select>
+        </div>
+      </div>
+      <!--end Donation Options Section-->
+
+      <!--start Donation Form-->
+      <div class="donation-form container">
+        <form id="donationForm">
+          <!-- الاسم الكامل -->
+          <div class="form-group">
+            <label for="name">الاسم الكامل:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              placeholder="الاسم الكامل"
+              required
+            />
+          </div>
+
+          <!-- البريد الإلكتروني -->
+          <div class="form-group">
+            <label for="email">البريد الإلكتروني:</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="البريد الالكتروني"
+              required
+            />
+          </div>
+
+          <!-- رقم الهاتف -->
+          <div class="form-group">
+            <label for="phone">رقم الهاتف:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="phone"
+              name="phone"
+              placeholder="رقم الهاتف "
+              required
+            />
+          </div>
+
+          <!-- مبلغ التبرع -->
+          <div class="form-group">
+            <label for="amount">مبلغ التبرع (بالجنيه):</label>
+            <input
+              type="number"
+              class="form-control"
+              id="amountInput"
+              name="amount"
+              min="1"
+              placeholder="جنيها مصريا.... "
+              required
+            />
+          </div>
+
+          <!-- طرق الدفع -->
+          <div class="form-group">
+            <label for="payment-method">طريقة الدفع:</label>
+            <select
+              id="payment-method"
+              class="form-control"
+              name="payment-method"
+              required
+            >
+              <option value="">اختر طريقة الدفع</option>
+              <option value="credit-card">بطاقة ائتمان</option>
+              <option value="paypal">PayPal</option>
+              <option value="vodafone-cash">فودافون كاش</option>
+            </select>
+          </div>
+
+          <!-- زر الإرسال -->
+          <button type="submit" class="submit-btn mt-5">تبرع الآن</button>
+        </form>
+      </div>
+    </section>
+
+    <!--end Donation Form-->
+
+    <footer class="pt-5 pb-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 col-md-6 col-lg-3 mb-4">
+            <a
+              href="/"
+              class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
+            >
+              <img
+                src="assets/imgs/logo.svg"
+                alt="شعار"
+                width="120"
+                height="120"
+              />
+            </a>
+            <p>
+              نعمل بجد لتقديم الدعم والمساعدة لمجتمعاتنا وتحقيق تأثير إيجابي
+              مستدام.
+            </p>
+            <ul class="contact-info d-flex flex-column gap-3 mt-4">
+              <li class="d-flex">
+                <span class="icon">
+                  <i class="fa-solid fa-phone"></i>
+                </span>
+                <span>info@domain.com</span>
+              </li>
+              <li>
+                <span class="icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </span>
+                <span>+20 123 456 789</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-sm-4 col-md-6 col-lg-3 mb-3">
+            <h5>روابط سريعة</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">الرئيسية</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">المميزات</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">الأسعار</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">الأسئلة الشائعة</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">من نحن</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-sm-4 col-md-6 col-lg-3 mb-3">
+            <h5>روابط سريعة</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">الرئيسية</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">المميزات</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">الأسعار</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">الأسئلة الشائعة</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">من نحن</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-sm-12 col-md-6 col-lg-3 mb-3">
+            <form>
+              <h5>اشترك في نشرتنا الإخبارية</h5>
+              <p>احصل على ملخص شهري لأحدث الأخبار والتحديثات مننا.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden"
+                  >البريد الإلكتروني</label
+                >
+                <input
+                  id="newsletter1"
+                  type="text"
+                  class="form-control"
+                  placeholder="البريد الإلكتروني"
+                />
+                <button class="btn" type="button">اشترك</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="d-flex flex-column flex-sm-row justify-content-between pt-4 mt-4 border-top rights"
+        >
+          <p>© 2024 الشركة، جميع الحقوق محفوظة.</p>
+          <ul class="list-unstyled d-flex">
+            <li>
+              <a class="link-body-emphasis" href="#">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </li>
+            <li class="me-3">
+              <a class="link-body-emphasis" href="#">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li class="me-3">
+              <a class="link-body-emphasis" href="#">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!--script-->
+    <script src="./js/donate.js"></script>
+  </body>
+</html>
